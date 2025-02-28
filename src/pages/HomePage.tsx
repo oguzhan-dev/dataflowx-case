@@ -1,5 +1,6 @@
 import React from 'react';
 import TeamForm from "../components/TeamForm.tsx";
+import UserForm from "../components/UserForm.tsx";
 
 const HomePage: React.FC = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <TeamForm/>
+                <UserForm/>
             </div>
         </div>
     );
