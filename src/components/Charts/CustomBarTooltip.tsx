@@ -1,5 +1,3 @@
-import React from "react";
-
 const CustomBarTooltip = ({active, payload, label}: any) => {
     if (active && payload && payload.length) {
         return (

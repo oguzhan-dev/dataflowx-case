@@ -1,5 +1,3 @@
-import React from "react";
-
 const UserNode = ({data}: { data: any }) => {
     return (
         <div

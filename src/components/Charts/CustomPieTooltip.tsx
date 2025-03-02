@@ -1,5 +1,3 @@
-import React from "react";
-
 const CustomPieTooltip = ({active, payload}: any) => {
     if (active && payload && payload.length) {
         return (
