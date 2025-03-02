@@ -15,37 +15,9 @@ import {
     LabelList
 } from 'recharts';
 import {BarChart2, PieChart as PieChartIcon} from 'lucide-react';
+import CustomPieTooltip from "../components/Charts/CustomPieTooltip.tsx";
+import CustomBarTooltip from "../components/Charts/CustomBarTooltip.tsx";
 
-const CustomPieTooltip = ({active, payload}: any) => {
-    if (active && payload && payload.length) {
-        return (
-            <div className="bg-white p-3 shadow-md rounded-md border border-gray-200">
-                <p className="font-medium">{payload[0].name}</p>
-                <p className="text-sm">
-                    <span className="font-medium">{payload[0].value}</span> members
-                </p>
-                <p className="text-sm text-gray-500">
-                    {(payload[0].payload.percent * 100).toFixed(0)}% of total
-                </p>
-            </div>
-        );
-    }
-    return null;
-};
-
-const CustomBarTooltip = ({active, payload, label}: any) => {
-    if (active && payload && payload.length) {
-        return (
-            <div className="bg-white p-3 shadow-md rounded-md border border-gray-200">
-                <p className="font-medium">{label}</p>
-                <p className="text-sm">
-                    <span className="font-medium">{payload[0].value}</span> members
-                </p>
-            </div>
-        );
-    }
-    return null;
-};
 
 const renderCustomizedPieLabel = (props: any) => {
     const {cx, cy, midAngle, innerRadius, outerRadius, percent, name} = props;
